@@ -1,25 +1,35 @@
 /*
   Tasks:
-    1. Add the post component to the app.component.html
+    1. Add a 404 page for when the user tries to access an invalid url. 
 */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
+
+import {
+  HomePageComponent,
+  PostsPageComponent
+} from './pages'
+
 import {
   AppComponent,
   HeaderComponent,
-  PostComponent,
 } from './components'
 
 @NgModule({
   declarations: [
     AppComponent,
+
+    HomePageComponent,
+    PostsPageComponent,
+
     HeaderComponent,
-    PostComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
