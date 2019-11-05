@@ -10,13 +10,15 @@ import {
   AppComponent,
   HeaderComponent,
   PostComponent,
-} from './components'
+} from './components';
+import { TransitionDirective } from './transition.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PostComponent,
+    TransitionDirective,
   ],
   imports: [
     BrowserModule
