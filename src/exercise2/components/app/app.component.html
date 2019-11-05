@@ -1,0 +1,10 @@
+<aw-header></aw-header>
+
+<div class="wrapper">
+
+  <h3>Posts</h3>
+
+  <div class="posts-container">
+    <aw-post [appTransition]="3" *ngFor="let post of posts" [post]="post"></aw-post>
+  </div>
+</div>

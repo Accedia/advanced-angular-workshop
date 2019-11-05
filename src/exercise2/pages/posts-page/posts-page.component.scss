@@ -1,13 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  margin: 0 auto;
+}
+
 .post {
   margin-bottom: 15px;
-  border: 1px solid #999;
+  border: 1px solid #333;
   border-radius: 3px;
 
 
   .post-header,
   .post-body,
   .post-footer {
-    padding: 10px;
+    padding: 0 10px;
   }
 
   .post-header,
@@ -19,7 +27,6 @@
 
   .post-header {
     justify-content: space-between;
-    font-size: 20px;
   }
 
   .post-footer {
