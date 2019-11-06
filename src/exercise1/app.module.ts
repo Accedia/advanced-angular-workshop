@@ -1,6 +1,7 @@
 /*
   Tasks:
-    1. Add the post component to the app.component.html
+    1. Complete the tasks in app.component.ts
+    2. Complete the tasks in box-shadow.directive.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,14 +12,15 @@ import {
   HeaderComponent,
   PostComponent,
 } from './components';
-import { TransitionDirective } from './transition.directive'
+
+import { BoxShadowDirective } from './box-shadow.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PostComponent,
-    TransitionDirective,
+    BoxShadowDirective,
   ],
   imports: [
     BrowserModule

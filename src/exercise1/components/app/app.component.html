@@ -1,3 +1,19 @@
+<!--
+  Tasks:
+    1: Show the posts by completing the *ngFor. You can find the name
+       of the array you need in the app.component.ts file.
+
+    2: Add the boxShadow directive to the aw-post component.
+
+    3: Complete the tasks in box-shadow.directive.ts
+
+
+  Note:
+    It's good practice to prefix your custom components with something
+    so that there are no collisions. In this case we use aw - short for
+    Accedia Workshops
+-->
+
 <aw-header></aw-header>
 
 <div class="wrapper">
@@ -5,6 +21,6 @@
   <h3>Posts</h3>
 
   <div class="posts-container">
-    <aw-post [appTransition]="3" *ngFor="let post of posts" [post]="post"></aw-post>
+    <!-- <aw-post *ngFor="let post of ..." [post]="post"></aw-post> -->
   </div>
 </div>
