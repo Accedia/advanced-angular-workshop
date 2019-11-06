@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from './environments/environment';
 
 // Change the import route here to change the current exercise
-import { AppModule } from './exercise2/app.module';
+import { AppModule } from './exercise3/app.module';
 
 if (environment.production) {
   enableProdMode();

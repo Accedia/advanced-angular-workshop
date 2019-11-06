@@ -1,3 +1,8 @@
+/*
+  Tasks:
+    1. Modify the routes array to include the NotFoundPageComponent
+*/
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,8 +12,8 @@ import {
   PostsPageComponent,
 } from './pages'
 
-
 /* 
+  Note:
   We use an array of routes to which component gets used when a specific path is hit.
   As you can see, we currently only have 'home' & 'posts' paths. If we try to load a url
   that is not specified in this array we get a blank page. To improve UX, websites 
@@ -22,7 +27,8 @@ const routes: Routes = [
   { path: 'posts', component: PostsPageComponent },
 ];
 
-/* HINT
+/* 
+  Hint:
   You may have noticed that when you added the 404 page, the routing stopped working
   and every url showed the 404 page. This is because we've told Angular to use a
   '**' (wildcard) for comparison (aka, match everything) and since Angular shows the

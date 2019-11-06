@@ -1,6 +1,8 @@
 /*
   Tasks:
-    1. Add a 404 page for when the user tries to access an invalid url. 
+    1. Complete the tasks in app.component.html
+    2. Complete the tasks in header.component.html
+    3. Complete the tasks in app-routing.module.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,16 +18,22 @@ import {
 import {
   AppComponent,
   HeaderComponent,
+  PostComponent
 } from './components'
+
+import { BoxShadowDirective } from './box-shadow.directive';
+
+import { SlicePipe } from './slice.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    HeaderComponent,
+    PostComponent,
     HomePageComponent,
     PostsPageComponent,
-
-    HeaderComponent,
+    BoxShadowDirective,
+    SlicePipe,
   ],
   imports: [
     BrowserModule,
