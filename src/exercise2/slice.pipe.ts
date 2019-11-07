@@ -1,7 +1,7 @@
 /*
   Tasks:
     1. Modify the transform function so that it returns
-       the substring from 0 to maxLength if necessary.
+       the substring from 0 to maxLength and add "..." at the end if necessary.
 */
 
 
