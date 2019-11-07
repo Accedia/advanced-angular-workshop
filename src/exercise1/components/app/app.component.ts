@@ -4,7 +4,7 @@ export class Post {
   id: Number
   title: string
   body: string
-  dateCreated: string,
+  dateCreated: string
   userId: Number
 }
 

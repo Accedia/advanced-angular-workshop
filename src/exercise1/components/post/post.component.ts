@@ -8,7 +8,5 @@ import { Post } from '../app/app.component'
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
-
   @Input() post: Post;
-
 }

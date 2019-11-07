@@ -1,6 +1,6 @@
 /*
   Tasks:
-    1. Complete the tasks in app.component.ts
+    1. Complete the tasks in app.component.html
     2. Complete the tasks in box-shadow.directive.ts
 */
 

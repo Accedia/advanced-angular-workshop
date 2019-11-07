@@ -1,6 +1,6 @@
 /*
   Tasks:
-    1. Complete the tasks in app.component.html
+    1. Complete the tasks in post.component.html
     2. Complete the tasks in slice.pipe.ts
 */
 

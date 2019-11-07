@@ -30,6 +30,6 @@ export class BoxShadowDirective implements OnInit {
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    // this.hostElement...
+    this.hostElement.nativeElement.style.boxShadow = '0px 3px 3px 1px rgba(0,0,0,0.57)'
   }
 }

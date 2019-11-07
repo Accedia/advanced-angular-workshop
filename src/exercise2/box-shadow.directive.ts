@@ -1,9 +1,3 @@
-/*
-  Tasks:
-    1. Update the 'mouseleave' event listener so that it resets the
-       box-shadow css property to the value from the ngOnInit method.
-*/
-
 import { Directive, ElementRef, HostListener, OnInit, Input } from '@angular/core';
 
 @Directive({
@@ -30,6 +24,6 @@ export class BoxShadowDirective implements OnInit {
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    // this.hostElement...
+    this.hostElement.nativeElement.style.boxShadow = '0px 3px 3px 1px rgba(0,0,0,0.57)'
   }
 }
