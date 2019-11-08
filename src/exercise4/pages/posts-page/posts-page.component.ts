@@ -18,6 +18,7 @@ export class Post {
   userId: Number
 };
 
+//TODO - make form for adding post in the posts array and add task for making some check on ngOnChange
 
 @Component({
   selector: 'aw-posts-page',

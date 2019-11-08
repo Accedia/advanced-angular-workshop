@@ -1,6 +1,6 @@
 <!--
   Tasks:
-    1. Modify the date pipe format to 'dd MMM yyyy'
+    1. Use the date pipe to format 'dateCreated' to 'dd MMM yyyy'
     2. Add the custom slice pipe to the post body
 -->
 
@@ -12,5 +12,5 @@
 
   <div class="post-body">{{ post.body }}</div>
 
-  <div class="post-footer">Posted by: {{ post.userId }} on {{ post.dateCreated | date: 'dd MM' }}</div>
+  <div class="post-footer">Posted by: {{ post.userId }} on {{ post.dateCreated }}</div>
 </div>
