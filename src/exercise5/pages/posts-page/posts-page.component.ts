@@ -1,3 +1,11 @@
+/*
+  Tasks:
+    1. Convert the promise returned from the fetch method to Observable
+    2. Use pipe method and the appropriate methods to get and map the response
+    3. Subscribe to the created observable
+    4. Make sure to unsubscribe the subscription to prevent memory leaks
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 export class Post {

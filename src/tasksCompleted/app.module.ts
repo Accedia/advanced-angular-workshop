@@ -1,8 +1,3 @@
-/*
-  Tasks:
-    1. Complete the tasks in posts-page.component.ts
-*/
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
