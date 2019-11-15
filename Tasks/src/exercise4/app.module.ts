@@ -1,8 +1,7 @@
 /*
   Tasks:
     1. Complete the tasks in posts-page.component.ts
-    2. Complete the tasks in post-page.component.ts
-    3. Complete the tasks in post.service.ts
+    2. Complete the tasks in post.service.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
