@@ -1,0 +1,9 @@
+<div class="posts-list-wrapper">
+  <h2>Awesome posts</h2>
+  <mat-list role="list">
+    <mat-list-item *ngFor="let post of posts" role="listitem">
+      <span class="post-content"> {{ post.content }} </span> 
+      <span class="post-author"> by {{ post.author }}</span>
+    </mat-list-item>
+  </mat-list>
+</div>

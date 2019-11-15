@@ -1,0 +1,38 @@
+.add-posts-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 4em;
+}
+
+mat-form-field {
+  margin-right: 2em;
+}
+
+.content {
+  width: 400px;
+}
+
+.posts-list-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+h2 {
+  border-bottom: 1px solid #e73b7f;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+h3 {
+  text-align: right;
+}
+
+.post-author {
+  margin-left: 3em;
+  font-weight: bold;
+}
+
+.post-content {
+  width: 70%;
+}
