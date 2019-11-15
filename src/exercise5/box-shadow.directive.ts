@@ -15,7 +15,7 @@ export class BoxShadowDirective implements OnInit {
   @Input('boxShadow') speed: string = "0.5";
 
   constructor(hostElement: ElementRef) {
-    this.hostElement = hostElement
+    this.hostElement = hostElement;
   }
 
   ngOnInit() {

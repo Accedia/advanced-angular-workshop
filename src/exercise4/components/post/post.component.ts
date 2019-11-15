@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Post } from '../../pages/posts-page/posts-page.component'
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'aw-post',

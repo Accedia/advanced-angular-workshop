@@ -1,14 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { from } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
-
-export class Post {
-  id: Number
-  title: String
-  body: String
-  dateCreated: string
-  userId: Number
-};
+import { Component, OnInit } from '@angular/core';
+import { PostService } from '../../services/post.service';
+import { Post } from '../../models/post.model';
+import { tap } from 'rxjs/operators';
 
 
 @Component({
@@ -16,24 +9,22 @@ export class Post {
   templateUrl: './posts-page.component.html',
   styleUrls: ['./posts-page.component.scss']
 })
-export class PostsPageComponent implements OnInit, OnDestroy {
+export class PostsPageComponent implements OnInit {
   public posts: Post[] = [];
-  private subscription;
+  private isLoadingPosts = true;
+
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.subscription = from(fetch('https://jsonplaceholder.typicode.com/posts'))
-    .pipe(
-      switchMap(response => response.json()),
-      map(posts => {
-        return posts.map(post => {return {...post, dateCreated: Date.now()} });
-      })
-    )
-    .subscribe(response => {
-      this.posts = response;
-    })
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.postService.getPosts()
+      .pipe(
+        tap(posts => {
+          console.log('got posts ', posts);
+          this.isLoadingPosts = false;
+        }),
+      )
+      .subscribe(posts => {
+        this.posts = posts;
+      });
   }
 }

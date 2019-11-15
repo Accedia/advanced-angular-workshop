@@ -12,7 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {
   HomePageComponent,
-  PostsPageComponent
+  PostsPageComponent,
+  NotFoundPageComponent,
+  PostPageComponent,
 } from './pages'
 
 import {
@@ -32,6 +34,8 @@ import { SlicePipe } from './slice.pipe'
     PostComponent,
     HomePageComponent,
     PostsPageComponent,
+    NotFoundPageComponent,
+    PostPageComponent,
     BoxShadowDirective,
     SlicePipe,
   ],

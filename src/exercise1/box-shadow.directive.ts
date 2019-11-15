@@ -1,7 +1,7 @@
 /*
   Tasks:
-    1. Update the 'mouseenter' event listener so that it changes the
-      box-shadow css property to different value from the ngOnInit method.
+    1. Update the 'mouseenter' event listener so that it sets the
+      box-shadow css property to the variable boxShadowOnHover.
     2. Update the 'mouseleave' event listener so that it resets the
       box-shadow css property to the value from the ngOnInit method.
     3. Remove the hardcoded '0.5s' on the transition property and make it like Input parameter 'speed'
@@ -15,6 +15,7 @@ import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 export class BoxShadowDirective implements OnInit {
   hostElement;
   boxShadow = '0px 3px 3px 1px rgba(0,0,0,0.57)';
+  boxShadowOnHover = '0px 3px 10px 1px rgba(0,0,0,0.57)';
 
   constructor(hostElement: ElementRef) {
     this.hostElement = hostElement

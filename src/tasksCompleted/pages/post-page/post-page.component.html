@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <h3>Post</h3>
+
+  <div *ngIf="post && !isLoading">
+    <aw-post [boxShadow] [post]="post"></aw-post>
+
+    <a routerLink="{{ getNextPostUrl(post.id) }}" routerLinkActive="active">Next Post</a>
+  </div>
+
+  <div *ngIf="isLoading" class="loader">Loading...</div>
+
+  <div *ngIf="!post && !isLoading">
+    <h3>There doesn't seem to be anything here :(</h3>
+  </div>
+</div>

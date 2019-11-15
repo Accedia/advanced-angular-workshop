@@ -1,0 +1,12 @@
+<div class="wrapper">
+
+  <h3>Post</h3>
+
+  <div *ngIf="post">
+    <aw-post [boxShadow] [post]="post"></aw-post>
+  </div>
+
+  <div *ngIf="!post">
+    <h3>There doesn't seem to be anything here :(</h3>
+  </div>
+</div>

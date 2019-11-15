@@ -1,6 +1,8 @@
 /*
   Tasks:
-    1. Complete the tasks in post-page.component.ts
+    1. Complete the tasks in posts-page.component.ts
+    2. Complete the tasks in post-page.component.ts
+    3. Complete the tasks in post.service.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {
   HomePageComponent,
   PostsPageComponent,
-  NotFoundPageComponent
+  NotFoundPageComponent,
+  PostPageComponent,
 } from './pages'
 
 import {
@@ -32,6 +35,7 @@ import { SlicePipe } from './slice.pipe'
     HomePageComponent,
     PostsPageComponent,
     NotFoundPageComponent,
+    PostPageComponent,
     BoxShadowDirective,
     SlicePipe,
   ],

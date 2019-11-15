@@ -1,13 +1,13 @@
-<!--
-  Tasks:
-    1. Modify the date pipe format to 'dd MMM yyyy'
-    2. Add the custom slice pipe to the post body
--->
+<!-- 
+  Note:
+  We have added a link here that points to /post/:id.
+ -->
 
 <div class="post">
   <div class="post-header">
-    <div class="post-title">{{ post.title }}</div>
-    <div class="post-id">#{{ post.id }}</div>
+
+    <div>{{ post.title }}</div>
+    <a class="post-title" routerLink="{{ '/post/' + post.id }}" routerLinkActive="active">#{{ post.id }}</a>
   </div>
 
   <div class="post-body">{{ post.body | slice: 20 }}</div>

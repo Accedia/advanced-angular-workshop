@@ -10,6 +10,7 @@ import {
   HomePageComponent,
   NotFoundPageComponent,
   PostsPageComponent,
+  PostPageComponent,
 } from './pages'
 
 /* 
@@ -20,13 +21,12 @@ import {
   often have a 404 page for cases like this. Try to add that page to the routes array.
 */
 
-//TODO - add route with some param (for example /post/{id})
-
 const routes: Routes = [
   // { path: '**', component: ... },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomePageComponent },
   { path: 'posts', component: PostsPageComponent },
+  { path: 'post/:id', component: PostPageComponent },
 ];
 
 /* 

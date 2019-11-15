@@ -13,6 +13,8 @@ import {
   PostComponent,
 } from './components';
 
+import { PostService } from './services/post.service';
+
 import { BoxShadowDirective } from './box-shadow.directive';
 
 import { SlicePipe } from './slice.pipe'
@@ -28,7 +30,7 @@ import { SlicePipe } from './slice.pipe'
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

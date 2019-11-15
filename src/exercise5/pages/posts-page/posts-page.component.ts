@@ -1,20 +1,12 @@
 /*
   Tasks:
-    1. Convert the promise returned from the fetch method to Observable
-    2. Use pipe method and the appropriate methods to get and map the response
-    3. Subscribe to the created observable
-    4. Make sure to unsubscribe the subscription to prevent memory leaks
+    1. Finish the ngOnInit implementation.
 */
 
 import { Component, OnInit } from '@angular/core';
-
-export class Post {
-  id: Number
-  title: String
-  body: String
-  dateCreated: string
-  userId: Number
-};
+import { PostService } from '../../services/post.service';
+import { Post } from '../../models/post.model';
+import { tap } from 'rxjs/operators';
 
 
 @Component({
@@ -24,10 +16,20 @@ export class Post {
 })
 export class PostsPageComponent implements OnInit {
   public posts: Post[] = [];
+  private isLoadingPosts = true;
 
+  constructor(private postService: PostService) { }
+
+  /*
+     Note:
+     Every observable has a pipe method that you can use to
+     'chain' methods that you need executed once a value has
+     been emmitted. For instance, the 'tap' method is often 
+     used to peek at the value or to set loading states,
+     while a 'map' method will be useful if we need to map a
+     value to another one. 
+   */
   ngOnInit() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(json => this.posts = json.map(post => {return {...post, dateCreated: Date.now()} }));
+    //this.postSubscription = this.postService.getPosts().pipe(...).subscribe(...)
   }
 }

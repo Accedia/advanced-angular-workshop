@@ -13,6 +13,8 @@ import {
   PostComponent,
 } from './components';
 
+import { PostService } from './services/post.service';
+
 import { BoxShadowDirective } from './box-shadow.directive'
 
 @NgModule({
@@ -25,7 +27,7 @@ import { BoxShadowDirective } from './box-shadow.directive'
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

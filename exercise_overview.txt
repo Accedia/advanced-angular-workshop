@@ -27,3 +27,7 @@ exercise 5
 rxjs
 
 
+
+element ref to host binding or renderer in box-shadow directive
+directives should have aw prefix
+add material design
