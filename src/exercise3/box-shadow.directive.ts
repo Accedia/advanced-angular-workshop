@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[boxShadow]'
+  selector: 'boxShadow'
 })
 export class BoxShadowDirective implements OnInit {
   hostElement;
