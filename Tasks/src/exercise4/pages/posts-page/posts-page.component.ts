@@ -1,10 +1,18 @@
 /*
   Tasks
-  1. Implement the logic in the ngOnInit function and set
-     the posts.
+  1. Import and implement OnInit 
+  1. Implement ngOnInit function and set
+     the posts in it. This is the query:  
+  this.postService.getPosts().then(posts => {
+      this.isLoadingPosts = false;
+      this.posts = posts;
+    }).catch(error => {
+      this.isLoadingPosts = false;
+      console.error(error);
+    })
 */
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 
@@ -21,7 +29,7 @@ import { Post } from '../../models/post.model';
   templateUrl: './posts-page.component.html',
   styleUrls: ['./posts-page.component.scss']
 })
-export class PostsPageComponent implements OnInit {
+export class PostsPageComponent {
   private isLoading: boolean = true;
   private posts: Post[];
 
@@ -32,15 +40,9 @@ export class PostsPageComponent implements OnInit {
     Any async calls go in the ngOnInit lifecycle hook, simmilar to the 
     componentDidMount one in react.
   */
+
   ngOnInit() {
     // this.postService.getPosts().then(posts => { ...
-    this.postService.getPosts().then(posts => {
-      this.isLoading = false;
-      this.posts = posts;
-    }).catch(error => {
-      this.isLoading = false;
-      console.error(error);
-    })
   }
 }
 

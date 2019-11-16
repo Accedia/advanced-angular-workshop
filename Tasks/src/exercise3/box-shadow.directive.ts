@@ -1,22 +1,36 @@
-import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Input, Renderer2, Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Directive({
-  selector: 'boxShadow'
+  selector: '[boxShadow]'
 })
 export class BoxShadowDirective implements OnInit {
+  @Input('boxShadow') speed: string = "0.5";
   hostElement;
   boxShadow = '0px 3px 3px 1px rgba(0,0,0,0.57)';
   boxShadowOnHover = '0px 3px 10px 1px rgba(0,0,0,0.57)';
 
-  constructor(hostElement: ElementRef) {
+  constructor(private renderer: Renderer2, hostElement: ElementRef) {
     this.hostElement = hostElement
   }
 
   ngOnInit() {
-    this.hostElement.nativeElement.style.display = 'block'
+    this.renderer.setStyle(
+      this.hostElement.nativeElement,
+      'display',
+      'block'
+    );
 
-    this.hostElement.nativeElement.style.boxShadow = this.boxShadow;
-    this.hostElement.nativeElement.style.transition = `box-shadow 0.5s`;
+    this.renderer.setStyle(
+      this.hostElement.nativeElement,
+      'box-shadow',
+      this.boxShadow
+    );
+
+    this.renderer.setStyle(
+      this.hostElement.nativeElement,
+      'transition',
+      `box-shadow ${this.speed}s`
+    );
   }
 
   @HostListener('mouseenter') onMouseEnter() {

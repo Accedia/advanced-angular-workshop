@@ -29,17 +29,13 @@ export class PostService {
     Don't forget to add a date to each post using the map function
   */
   getPostById(id: string): Observable<Post | undefined> {
-    return undefined // return this.http.get(...
+     return undefined // return this.http.get(...
   }
 
   getPosts(): Observable<Post[]> {
     return this.http.get('https://jsonplaceholder.typicode.com/posts').pipe(
       map(posts => (posts as Object[]).map(addDateToPost) as Post[])
     );
-
-    // return fetch('https://jsonplaceholder.typicode.com/posts')
-    // .then(response => response.json())
-    // .then(posts => posts.map(post => addDateToPost(post as Post)));
   }
 }
 
