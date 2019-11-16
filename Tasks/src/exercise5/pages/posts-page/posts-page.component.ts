@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 import { tap } from 'rxjs/operators';
-
+import { FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'aw-posts-page',
@@ -17,9 +17,23 @@ import { tap } from 'rxjs/operators';
 export class PostsPageComponent implements OnInit {
   public posts: Post[] = [];
   private isLoadingPosts = true;
+  postForm;
 
-  constructor(private postService: PostService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private postService: PostService
+  ) {
+    this.postForm = this.formBuilder.group({
+      title: new FormControl(),
+      body: new FormControl()
+    });
+  }
 
+  onSubmit(post) {
+    this.posts.unshift({title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString()});
+    this.postForm.reset();
+  }
+  
   /*
      Note:
      Every observable has a pipe method that you can use to

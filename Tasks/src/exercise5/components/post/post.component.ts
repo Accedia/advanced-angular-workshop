@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 import { Post } from '../../models/post.model';
 
@@ -7,6 +7,13 @@ import { Post } from '../../models/post.model';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent {
+export class PostComponent implements OnChanges {
   @Input() post: Post;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes && changes.post) {
+      console.log(changes.post.previousValue);
+      console.log(changes.post.currentValue);
+    }
+  }
 }

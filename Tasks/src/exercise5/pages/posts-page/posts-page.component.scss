@@ -4,4 +4,16 @@
 
   width: 50%;
   margin: 0 auto;
+
+  .post-form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 10px 20px;
+
+    .control {
+      margin: 0 20px;
+      display: inline-block;
+    }
+  }
 }

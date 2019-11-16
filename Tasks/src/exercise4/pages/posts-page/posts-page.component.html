@@ -1,7 +1,21 @@
 <div class="wrapper">
 
   <h3>Posts</h3>
-
+  <div>
+    <form class="post-form" [formGroup]="postForm" (ngSubmit)="onSubmit(postForm.value)">
+      <div class="control">
+        <mat-form-field>
+          <input matInput placeholder="Title" ype="text" formControlName="title">
+        </mat-form-field>
+      </div>
+      <div class="control">
+        <mat-form-field>
+          <textarea matInput formControlName="body" placeholder="Body"></textarea>
+        </mat-form-field>
+      </div>
+      <button type="submit" mat-stroked-button color="primary">Add post</button>
+    </form>
+  </div>
   <div class="posts-container">
     <aw-post boxShadow *ngFor="let post of posts" [post]="post"></aw-post>
   </div>

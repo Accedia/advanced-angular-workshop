@@ -2,12 +2,16 @@
   Tasks:
     1. Complete the tasks in posts-page.component.ts
     2. Complete the tasks in post.service.ts
+    3. Complete the tasks in post.component.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 import {
   HomePageComponent,
@@ -24,7 +28,8 @@ import {
 
 import { BoxShadowDirective } from './box-shadow.directive';
 
-import { SlicePipe } from './slice.pipe'
+import { SlicePipe } from './slice.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -40,7 +45,13 @@ import { SlicePipe } from './slice.pipe'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

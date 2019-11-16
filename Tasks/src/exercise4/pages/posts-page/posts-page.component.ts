@@ -1,22 +1,21 @@
 /*
   Tasks
   1. Import and implement OnInit 
-  1. Implement ngOnInit function and set
+  2. Implement ngOnInit function and set
      the posts in it. This is the query:  
   this.postService.getPosts().then(posts => {
-      this.isLoadingPosts = false;
+      this.isLoading = false;
       this.posts = posts;
     }).catch(error => {
-      this.isLoadingPosts = false;
+      this.isLoading = false;
       console.error(error);
     })
 */
 
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
-
-//TODO - make form for adding post in the posts array and add task for making some check on ngOnChange
 
 /* 
   Note:
@@ -32,8 +31,22 @@ import { Post } from '../../models/post.model';
 export class PostsPageComponent {
   private isLoading: boolean = true;
   private posts: Post[];
+  postForm;
 
-  constructor(private postService: PostService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private postService: PostService
+  ) {
+    this.postForm = this.formBuilder.group({
+      title: new FormControl(),
+      body: new FormControl()
+    });
+  }
+
+  onSubmit(post) {
+    this.posts.unshift({title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString()});
+    this.postForm.reset();
+  }
 
   /* 
     Note:
