@@ -1,0 +1,28 @@
+<div *ngIf="!allowEdit">
+  <h4>You are not allowed to edit!</h4>
+</div>
+<div *ngIf="allowEdit">
+  <div class="form-group">
+    <label for="name">Post Title</label>
+    <textarea
+      type="text"
+      id="title"
+      class="form-control"
+      [(ngModel)]="postTitle">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <label for="status">Post Body</label>
+    <textarea
+      type="text"
+      id="body"
+      class="form-control"
+      [(ngModel)]="postBody">
+    </textarea>
+  </div>
+  <button
+    class="btn btn-primary"
+    (click)="onUpdatePost()">
+    Update Post
+  </button>
+</div>
