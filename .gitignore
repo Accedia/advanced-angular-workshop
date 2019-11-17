@@ -9,6 +9,8 @@
 
 # dependencies
 /Tasks/node_modules
+/DemosDayOne/node_modules
+/DemosDayTwo/node_modules
 
 # profiling files
 chrome-profiler-events*.json
