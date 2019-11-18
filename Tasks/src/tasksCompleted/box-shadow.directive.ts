@@ -1,10 +1,10 @@
 import { Input, Directive, Renderer2, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[boxShadow]'
+  selector: '[aw-boxShadow]'
 })
 export class BoxShadowDirective implements OnInit {
-  @Input('boxShadow') speed: string = "0.5";
+  @Input('aw-boxShadow') speed: string = "0.5";
   hostElement;
   boxShadow = '0px 3px 3px 1px rgba(0,0,0,0.57)';
   boxShadowOnHover = '0px 3px 10px 1px rgba(0,0,0,0.57)';
