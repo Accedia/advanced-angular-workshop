@@ -8,14 +8,13 @@ import { UserComponent } from './users/user/user.component';
 import { EditPostComponent } from './posts/edit-post/edit-post.component';
 import { PostComponent } from './posts/post/post.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'users', component: UsersComponent, children: [
     {path: ':id/:name', component: UserComponent},
   ]},  
-  {path: 'posts', canActivate:[AuthGuard], component: PostsComponent, children: [
+  {path: 'posts', component: PostsComponent, children: [
     {path: ':id', component: PostComponent},
     {path: ':id/edit', component: EditPostComponent}
   ]},

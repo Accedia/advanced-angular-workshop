@@ -19,7 +19,6 @@ export class ImpovedHighlightDirective implements OnInit {
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
-    console.log(this.highlightColor);
     this.backgroundColor = this.defaultColor;
     // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
   }
