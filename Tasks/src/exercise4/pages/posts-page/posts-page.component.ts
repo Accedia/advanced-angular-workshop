@@ -30,7 +30,7 @@ import { Post } from '../../models/post.model';
 })
 export class PostsPageComponent {
   private isLoading: boolean = true;
-  private posts: Post[];
+  public posts: Post[] = [];
   postForm;
 
   constructor(

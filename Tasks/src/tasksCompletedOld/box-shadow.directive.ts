@@ -7,12 +7,12 @@
 import { Directive, ElementRef, HostListener, OnInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[boxShadow]'
+  selector: '[aw-boxShadow]'
 })
 export class BoxShadowDirective implements OnInit {
   hostElement;
 
-  @Input('boxShadow') speed: string = "0.5";
+  @Input('aw-boxShadow') speed: string = "0.5";
 
   constructor(hostElement: ElementRef) {
     this.hostElement = hostElement

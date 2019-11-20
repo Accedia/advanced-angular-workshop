@@ -10,7 +10,7 @@
 import { Directive, ElementRef, HostListener, Renderer2, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[boxShadow]'
+  selector: '[aw-boxShadow]'
 })
 export class BoxShadowDirective implements OnInit {
   hostElement;
@@ -42,10 +42,10 @@ export class BoxShadowDirective implements OnInit {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    // this.hostElement...
+    // this..renderer.setStyle(...
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    // this.hostElement...
+    // this..renderer.setStyle(...
   }
 }

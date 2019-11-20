@@ -3,7 +3,7 @@
   <h3>Post</h3>
 
   <div *ngIf="post && !isLoading">
-    <aw-post boxShadow [post]="post"></aw-post>
+    <aw-post aw-boxShadow [post]="post"></aw-post>
 
     <a routerLink="{{ getNextPostUrl(post.id) }}" routerLinkActive="active">Next Post</a>
   </div>
