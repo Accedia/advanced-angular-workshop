@@ -9,8 +9,8 @@ import { Post } from './post.model';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  private posts: Post[] = [];
-  private postAuthor: Promise<string>;
+  posts: Post[] = [];
+  postAuthor: Promise<string>;
 
   constructor(private postsService: PostsService) { }
 
