@@ -1,0 +1,9 @@
+<div *ngIf="post.id % 2 == 0">
+  <h5 awHighlight>{{ post.title }}</h5>
+</div>
+<div *awUnless="post.id % 2 == 0">
+  <h5 >{{ post.title }}</h5>
+</div>
+<p [awImprovedHighlight]="'green'">{{ post.body }}</p>
+
+<button class="btn btn-primary" (click)="onEdit()">Edit post</button>
