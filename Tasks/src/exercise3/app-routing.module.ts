@@ -1,7 +1,8 @@
 /*
   Tasks:
     1. Modify the routes array to include the NotFoundPageComponent
-    2. Modify the routes array to include the post/:id route
+    2. Modify the routes array to include the posts/:id route. Make it as a child route
+      to posts route
 */
 
 import { NgModule } from '@angular/core';
@@ -24,7 +25,6 @@ import {
 
 const routes: Routes = [
   // { path: '**', component: ... },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomePageComponent },
   { path: 'posts', component: PostsPageComponent }
 ];

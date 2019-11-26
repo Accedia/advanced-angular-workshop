@@ -1,8 +1,8 @@
-<div class="post">
+<div class="post" routerLink="{{ '/posts/' + post.id }}" routerLinkActive="active">
   <div class="post-header">
 
     <div>{{ post.title }}</div>
-    <a class="post-title" routerLink="{{ '/post/' + post.id }}" routerLinkActive="active">#{{ post.id }}</a>
+    <a class="post-title">#{{ post.id }}</a>
   </div>
 
   <div class="post-body">{{ post.body | slice: 20 }}</div>

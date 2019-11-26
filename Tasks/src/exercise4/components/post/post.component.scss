@@ -6,7 +6,10 @@
   border: 1px solid #999;
   border-radius: 3px;
 
-
+  &:hover {
+    cursor: pointer;
+  }
+  
   .post-header,
   .post-body,
   .post-footer {

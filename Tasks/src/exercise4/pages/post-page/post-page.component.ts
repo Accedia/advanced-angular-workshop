@@ -36,6 +36,6 @@ export class PostPageComponent implements OnInit {
   }
 
   getNextPostUrl() {
-    return '/post/' + (Number(this.activatedRoute.snapshot.params.id) + 1);
+    return '/posts/' + (Number(this.activatedRoute.snapshot.params.id) + 1);
   }
 }

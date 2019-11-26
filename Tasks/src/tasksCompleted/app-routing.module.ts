@@ -9,10 +9,12 @@ import {
 } from './pages'
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomePageComponent },
-  { path: 'posts', component: PostsPageComponent },
-  { path: 'post/:id', component: PostPageComponent },
+  { path: 'posts', component: PostsPageComponent,
+    children: [
+      { path: ':id', component: PostPageComponent }
+    ] 
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 

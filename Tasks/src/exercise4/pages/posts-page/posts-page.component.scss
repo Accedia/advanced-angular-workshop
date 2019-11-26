@@ -5,6 +5,15 @@
   width: 50%;
   margin: 0 auto;
 
+  h3 {
+    margin: 0;
+  }
+
+  .posts-container {
+    height: 400px;
+    overflow-y: scroll;
+  }
+  
   .post-form {
     border: 1px solid #ccc;
     border-radius: 10px;

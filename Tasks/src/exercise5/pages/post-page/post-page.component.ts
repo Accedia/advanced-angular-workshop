@@ -67,6 +67,6 @@ export class PostPageComponent implements OnInit {
 
 
   getNextPostUrl(id: string) {
-    return '/post/' + (Number(id) + 1);
+    return '/posts/' + (Number(id) + 1);
   }
 }

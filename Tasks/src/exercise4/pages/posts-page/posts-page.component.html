@@ -16,6 +16,7 @@
       <button type="submit" mat-stroked-button color="primary">Add post</button>
     </form>
   </div>
+  <router-outlet></router-outlet>
   <div class="posts-container">
     <aw-post [awBorder] *ngFor="let post of posts" [post]="post"></aw-post>
   </div>
