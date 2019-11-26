@@ -10,9 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import {
@@ -29,9 +29,7 @@ import {
 } from './components'
 
 import { PostService } from './services/post.service'
-
-import { BoxShadowDirective } from './box-shadow.directive';
-
+import { AwBorderDirective } from './directives/border/awBorder.directive';
 import { SlicePipe } from './slice.pipe'
 
 @NgModule({
@@ -43,7 +41,7 @@ import { SlicePipe } from './slice.pipe'
     PostsPageComponent,
     NotFoundPageComponent,
     PostPageComponent,
-    BoxShadowDirective,
+    AwBorderDirective,
     SlicePipe,
   ],
   imports: [

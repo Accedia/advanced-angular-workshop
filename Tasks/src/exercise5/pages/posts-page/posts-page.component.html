@@ -18,6 +18,6 @@
   </div>
   <div class="posts-container">
     <div *ngIf="isLoadingPosts" class="loader">Loading...</div>
-    <aw-post aw-boxShadow *ngFor="let post of posts" [post]="post"></aw-post>
+    <aw-post [awBorder] *ngFor="let post of posts" [post]="post"></aw-post>
   </div>
 </div>

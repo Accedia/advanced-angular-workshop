@@ -1,7 +1,7 @@
 /*
   Tasks:
     1. Complete the tasks in app.component.html
-    2. Complete the tasks in box-shadow.directive.ts
+    2. Complete the tasks in awBorder.directive.ts
 */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,15 +14,14 @@ import {
 } from './components';
 
 import { PostService } from './services/post.service';
-
-import { BoxShadowDirective } from './box-shadow.directive'
+import { AwBorderDirective } from './directives/border/awBorder.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PostComponent,
-    BoxShadowDirective,
+    AwBorderDirective,
   ],
   imports: [
     BrowserModule

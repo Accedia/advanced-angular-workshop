@@ -26,8 +26,7 @@ import {
   PostComponent,
 } from './components'
 
-import { BoxShadowDirective } from './box-shadow.directive';
-
+import { AwBorderDirective } from './directives/border/awBorder.directive';
 import { SlicePipe } from './slice.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
@@ -40,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     PostsPageComponent,
     NotFoundPageComponent,
     PostPageComponent,
-    BoxShadowDirective,
+    AwBorderDirective,
     SlicePipe,
   ],
   imports: [

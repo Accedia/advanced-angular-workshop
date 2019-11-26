@@ -14,9 +14,7 @@ import {
 } from './components';
 
 import { PostService } from './services/post.service';
-
-import { BoxShadowDirective } from './box-shadow.directive';
-
+import { AwBorderDirective } from './directives/border/awBorder.directive';
 import { SlicePipe } from './slice.pipe'
 
 @NgModule({
@@ -24,7 +22,7 @@ import { SlicePipe } from './slice.pipe'
     AppComponent,
     HeaderComponent,
     PostComponent,
-    BoxShadowDirective,
+    AwBorderDirective,
     SlicePipe,
   ],
   imports: [
