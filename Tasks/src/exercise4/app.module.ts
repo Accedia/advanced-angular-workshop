@@ -27,7 +27,7 @@ import {
 } from './components'
 
 import { AwBorderDirective } from './directives/border/awBorder.directive';
-import { SlicePipe } from './slice.pipe';
+import { SlicePipe } from './pipes/slice/slice.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
