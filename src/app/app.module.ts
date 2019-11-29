@@ -11,10 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AddPostPanelComponent } from './add-post-panel/add-post-panel.component';
+import { AddPostPanelComponent } from './components/add-post-panel/add-post-panel.component';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { PostsListComponent } from './posts-list/posts-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PostsListComponent } from './components/posts-list/posts-list.component';
 
 @NgModule({
    declarations: [
