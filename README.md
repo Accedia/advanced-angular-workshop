@@ -47,7 +47,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
     1.1 Put a router-outlet component in the .page-container div.
 
 
-  2. Complete the tasks in header.component.html
+  2. Complete the tasks in header.component.html 
     2.1 Add a router link to /posts in the nav component
 
   3. Complete the tasks in app-routing.module.ts

@@ -19,8 +19,9 @@ import {
 const routes: Routes = [
   // TODO 3.1
   // { path: '**', component: ... },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
-  { path: 'posts', component: PostsPageComponent /* TODO 3.2 */ }
+  { path: 'posts', component: PostsPageComponent, /* TODO 3.2 */},  
 ];
 
 /* 
