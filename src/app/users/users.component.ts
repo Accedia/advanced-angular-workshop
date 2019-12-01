@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'aw-users',
@@ -9,7 +9,7 @@ export class UsersComponent {
   users = [
     {
       id: 1,
-      name: 'John'
+      name: 'Max'
     },
     {
       id: 2,

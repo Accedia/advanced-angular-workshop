@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Post } from '../post.model';
-import { PostsService } from '../posts.service';
+import { PostsService } from './../posts.service';
 
 @Component({
   selector: 'aw-post',
@@ -12,20 +11,9 @@ import { PostsService } from '../posts.service';
 export class PostComponent implements OnInit {
   post: Post;
 
-  constructor(private postService: PostsService, 
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private postService: PostsService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
-      (params: Params) => {
-        const postId = +params['id'];
-        this.post = this.postService.getPost(postId);
-      }
-    )
-  }
-
-  onEdit() {
-    this.router.navigate(['/posts', this.post.id, 'edit'], {queryParamsHandling: 'preserve'});
+    this.post = this.postService.getPost(1);
   }
 }

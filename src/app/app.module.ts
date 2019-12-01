@@ -10,7 +10,6 @@ import { EditPostComponent } from './posts/edit-post/edit-post.component';
 import { PostComponent } from './posts/post/post.component';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
    declarations: [
@@ -20,8 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       UserComponent,
       PostsComponent,
       PostComponent,
-      EditPostComponent,
-      NotFoundComponent
+      EditPostComponent
    ],
    imports: [
       BrowserModule,

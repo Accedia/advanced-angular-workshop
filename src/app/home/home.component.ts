@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'aw-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  constructor(private router: Router) { }
+export class HomeComponent implements OnInit {
 
-  onShowPosts() {
-    this.router.navigate(['/posts']);
+  constructor() { }
+
+  ngOnInit() {
   }
+
 }

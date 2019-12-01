@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 
-import { PostsService } from '../posts.service';
+import { PostsService } from './../posts.service';
 import { Post } from '../post.model';
 
 @Component({
@@ -13,25 +12,13 @@ export class EditPostComponent implements OnInit {
   post: Post;
   postTitle = '';
   postBody = '';
-  allowEdit = false;
 
-  constructor(private postsService: PostsService, private route: ActivatedRoute) { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
-      (params: Params) => {
-        const postId = +params['id'];
-        this.post = this.postsService.getPost(postId);
-        this.postTitle = this.post.title;
-        this.postBody = this.post.body;
-      }
-    )
-
-    this.route.queryParams.subscribe(
-      (params: Params) => {
-        this.allowEdit = params['allowEdit'] == '1' ? true : false;
-      }
-    )
+    this.post = this.postsService.getPost(1);
+    this.postTitle = this.post.title;
+    this.postBody = this.post.body;
   }
 
   onUpdatePost() {
