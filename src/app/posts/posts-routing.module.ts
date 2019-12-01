@@ -7,7 +7,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'posts',
     component: PostsComponent, 
     children: [
       {path: ':id', component: PostComponent},
