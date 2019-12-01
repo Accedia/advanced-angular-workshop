@@ -14,7 +14,7 @@ task/3
 task/4
 task/5
 
-## Finding where the tasks are
+## Finding the tasks
 There is a TODO comment for each task. For instance, you can search for 'TODO 2.2'
 
 # Tasks
