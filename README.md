@@ -34,7 +34,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
 
 ## Task 2
   1. Complete the tasks in post.component.html
-    1.1 Use the date pipe to format 'dateCreated' to 'dd MMM yyyy'
+    1.1 Use the date pipe to format 'dateCreated' to 'dd MMM yyyy' 
     1.2 Add the custom slice pipe to the post body.
 
   2. Complete the tasks in slice.pipe.ts
