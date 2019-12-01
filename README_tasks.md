@@ -1,24 +1,5 @@
-# Angular8Workshop
+##Exercise 1
 
-## Setup
-Run `npm install` in the root dir of the project.
-
-## Run
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Change the current task
-Checkout the corresponding branch:
-task/1
-task/2
-task/3
-task/4
-task/5
-
-## Finding where the tasks are
-There is a TODO comment for each task. For instance, you can search for 'TODO 2.2'
-
-# Tasks
-## Task 1
   1. Complete the tasks in app.component.html
     1.1 Show the posts by completing the *ngFor. You can find the name
         оf the array you need in the app.component.ts file.
@@ -32,7 +13,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
         color value like a default if no other is passed.
 
 
-## Task 2
+##Exercise 2
   1. Complete the tasks in post.component.html
     1.1 Use the date pipe to format 'dateCreated' to 'dd MMM yyyy'
     1.2 Add the custom slice pipe to the post body.
@@ -42,7 +23,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
         the substring from 0 to maxLength and add "..." at the end if necessary.
 
 
-## Task 3
+##Exercise 3
   1. Complete the tasks in app.component.html
     1.1 Put a router-outlet component in the .page-container div.
 
@@ -60,7 +41,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
         for the child route.
 
 
-## Task 4
+##Exercise 4
   1. Complete the tasks in posts-page.component.ts
     1.1 Import and implement OnInit 
     1.2 Complete the getPosts function call and save the posts in this.posts.
@@ -79,7 +60,7 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
         the current value and the previous value of the post
 
 
-## Task 5
+##Exercise 5
   1. Complete the tasks in post.service.ts
     1.1 Complete the getPostById function by using the http module.
         Add a date to the post using .pipe(map...

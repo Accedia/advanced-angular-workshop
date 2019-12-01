@@ -1,9 +1,3 @@
-/*
-  Tasks:
-    1. Complete the tasks in app.component.html
-    2. Complete the tasks in awBorder.directive.ts
-*/
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

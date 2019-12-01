@@ -1,10 +1,3 @@
-/*
-  Tasks:
-    1. Modify the transform function so that it returns
-       the substring from 0 to maxLength and add "..." at the end if necessary.
-*/
-
-
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -22,6 +15,7 @@ export class SlicePipe implements PipeTransform {
   */
   transform(value: string, maxLength: number = 200): any {
     
+    // TODO 2.1
     return value.length > maxLength 
       ? value //.substring(...
       : value;

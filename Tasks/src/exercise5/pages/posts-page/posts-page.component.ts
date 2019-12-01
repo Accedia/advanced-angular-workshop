@@ -1,8 +1,3 @@
-/*
-  Tasks:
-    1. Finish the ngOnInit implementation.
-*/
-
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
@@ -16,7 +11,7 @@ import { FormBuilder, FormControl } from '@angular/forms';
 })
 export class PostsPageComponent implements OnInit {
   public posts: Post[] = [];
-  private isLoadingPosts = true;
+  private isLoading = true;
   postForm;
 
   constructor(
@@ -44,6 +39,7 @@ export class PostsPageComponent implements OnInit {
      value to another one. 
    */
   ngOnInit() {
-    //this.postSubscription = this.postService.getPosts().pipe(...).subscribe(...)
+    // TODO 2.1
+    // this.postService.getPosts().pipe(...).subscribe(...)
   }
 }

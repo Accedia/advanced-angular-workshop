@@ -1,9 +1,4 @@
 /*
-  Tasks:
-  1. Complete the getPostById function by using the http module.
-     Add a date to the post using .pipe(map...
-
-
   Note:
   When using the http module, there is no need to unsubscribe
   from observables since every request ultimately completes, and
@@ -29,7 +24,8 @@ export class PostService {
     Don't forget to add a date to each post using the map function
   */
   getPostById(id: string): Observable<Post | undefined> {
-     return undefined // return this.http.get(...
+    // TODO 1.1
+    return undefined // return this.http.get(...
   }
 
   getPosts(): Observable<Post[]> {

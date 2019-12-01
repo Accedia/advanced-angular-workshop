@@ -1,11 +1,3 @@
-/*
-  Tasks:
-    1. Complete the tasks in app.component.html
-    2. Complete the tasks in header.component.html
-    3. Complete the tasks in app-routing.module.ts
-    4. Complete the tasks in posts-page.component.html
-*/
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

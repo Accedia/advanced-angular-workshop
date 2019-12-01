@@ -1,9 +1,3 @@
-/*
-  Tasks:
-    1. Complete the tasks in post.service.ts
-    2. Complete the tasks in posts-page.component.ts
-*/
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

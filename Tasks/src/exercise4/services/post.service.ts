@@ -1,12 +1,3 @@
-/*
-  Tasks:
-    1. Remove hardcoded data and initialize posts as empty array
-    2. Finish getPosts() to fetch the posts data
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(json => this.posts = json.map(addDateToPost));
-*/
-
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
 
@@ -17,6 +8,7 @@ export class PostService {
    private posts: Post[];
 
   constructor() {
+    // TODO 2.1
       this.posts = [
         {
           id: 1,
@@ -69,14 +61,14 @@ export class PostService {
   }
 
   getPosts(): Promise<Post[]> {
-    // return fetch('https://jsonplaceholder.typicode.com/posts')
-    return undefined;
+    // TODO 2.2
+    // return fetch('https://jsonplaceholder.typicode.com/posts')...
+    return Promise.resolve(this.posts);
   }
 }
 
 /*  
   Note
-  For the sake of the example, we are adding a dateCreated prop
-  to every post.
+  For the sake of the example, we are adding a dateCreated prop to every post.
 */
 const addDateToPost = post => ({ ...post, dateCreated: Date.now() })
