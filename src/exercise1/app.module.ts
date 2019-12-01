@@ -8,7 +8,7 @@ import {
 } from './components';
 
 import { PostService } from './services/post.service';
-import { AwBorderDirective } from './directives/border/awBorder.directive';
+import { AwBorderDirective } from './directives/border/border.directive';
 
 @NgModule({
   declarations: [
