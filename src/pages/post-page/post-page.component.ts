@@ -16,24 +16,14 @@ export class PostPageComponent implements OnInit {
   private posts: Post[];
 
   constructor(private activatedRoute: ActivatedRoute, private postService: PostService) { }
-  ngOnInit() {
 
-    // this.postService.getPosts().then(posts => {
-    //   this.isLoading = false;
-    //   this.posts = posts;
-    // }).catch(error => {
-    //   this.isLoading = false;
-    //   console.error(error);
-    // })
-    
+  ngOnInit() {    
     /*
       Note:
       We are subscribing to route param changes so that we are
       notified any time the id in the urlchanges. This will
       ensure that the user gets the correct post every time.
     */
-
-
     this.routeSubscription = this.activatedRoute.params.subscribe(routeParamsObject => {
       this.getPostById(routeParamsObject.id)
     });
@@ -59,6 +49,7 @@ export class PostPageComponent implements OnInit {
         this.post = post;
       },
       error => {
+        console.error(error)
         this.isLoading = false;
         this.post = undefined;
       }
