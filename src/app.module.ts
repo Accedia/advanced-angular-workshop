@@ -8,8 +8,7 @@ import {
 } from './components';
 
 import { PostService } from './services/post.service';
-import { AwBorderDirective } from './directives/border/awBorder.directive';
-import { SlicePipe } from './pipe/slice/slice.pipe'
+import { AwBorderDirective } from './directives/border/border.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { SlicePipe } from './pipe/slice/slice.pipe'
     HeaderComponent,
     PostComponent,
     AwBorderDirective,
-    SlicePipe,
   ],
   imports: [
     BrowserModule
