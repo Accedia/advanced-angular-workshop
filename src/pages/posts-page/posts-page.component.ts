@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 import { tap } from 'rxjs/operators';
@@ -9,9 +9,10 @@ import { FormBuilder, FormControl } from '@angular/forms';
   templateUrl: './posts-page.component.html',
   styleUrls: ['./posts-page.component.scss']
 })
-export class PostsPageComponent implements OnInit {
+export class PostsPageComponent implements OnInit, AfterViewInit {
   public posts: Post[] = [];
   private isLoading = true;
+  @ViewChild('title', { static: true }) title: ElementRef;
   postForm;
 
   constructor(
@@ -25,10 +26,10 @@ export class PostsPageComponent implements OnInit {
   }
 
   onSubmit(post) {
-    this.posts.unshift({title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString()});
+    this.posts.unshift({ title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString() });
     this.postForm.reset();
   }
-  
+
   /*
      Note:
      Every observable has a pipe method that you can use to
@@ -41,5 +42,9 @@ export class PostsPageComponent implements OnInit {
   ngOnInit() {
     // TODO 2.1
     // this.postService.getPosts().pipe(...).subscribe(...)
+  }
+
+  ngAfterViewInit() {
+    console.log(this.title)
   }
 }
