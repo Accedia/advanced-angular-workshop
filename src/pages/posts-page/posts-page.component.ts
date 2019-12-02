@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
@@ -15,9 +15,11 @@ import { Post } from '../../models/post.model';
   templateUrl: './posts-page.component.html',
   styleUrls: ['./posts-page.component.scss']
 })
-export class PostsPageComponent {
+export class PostsPageComponent implements AfterViewInit {
   private isLoading: boolean = true;
   public posts: Post[] = [];
+  // TODO 1.4
+  // @ViewChild('title',...
   postForm;
 
   constructor(
@@ -31,7 +33,7 @@ export class PostsPageComponent {
   }
 
   onSubmit(post) {
-    this.posts.unshift({title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString()});
+    this.posts.unshift({ title: post.title, body: post.body, id: 7, userId: 4, dateCreated: Date.now().toString() });
     this.postForm.reset();
   }
 
@@ -43,6 +45,11 @@ export class PostsPageComponent {
   ngOnInit() {
     // TODO 1.2, TODO 1.3
     // this.postService.getPosts().then(posts => { ...
+  }
+
+  ngAfterViewInit(){
+    // TODO 1.5
+    // console.log(this...
   }
 }
 

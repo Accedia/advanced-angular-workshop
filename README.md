@@ -65,7 +65,8 @@ There is a TODO comment for each task. For instance, you can search for 'TODO 2.
     1.1 Import and implement OnInit 
     1.2 Complete the getPosts function call and save the posts in this.posts.
     1.3 Set the isLoading flag to false once the getPosts request completes.
-
+    1.4 Add a ViewChild property and get a reference to the h3 title from the .html file.
+    1.5 Log out the ViewChild to the console.
 
   2. Complete the tasks in post.service.ts
     2.1 Remove hardcoded posts data and initialize this.posts as empty array
