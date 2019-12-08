@@ -6,7 +6,7 @@ import { PostPageComponent } from './pages/post-page/post-page.component';
 
 const routes: Routes = [
   {
-    path: 'posts',
+    path: '',
     component: PostsPageComponent, 
     children: [
       {path: ':id', component: PostPageComponent}
