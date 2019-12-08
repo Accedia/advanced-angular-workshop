@@ -3,8 +3,6 @@
     <div class="list-group">
       <a
         [routerLink]="['/posts', post.id]"
-        [queryParams]="{allowEdit: post.id===2 ? '1' : '0'}"
-        href="#"
         class="list-group-item"
         *ngFor="let post of posts">
         Post {{ post.id }}
@@ -13,9 +11,6 @@
   </div>
   <div class="col-xs-12 col-sm-8">
     <router-outlet></router-outlet>
-    <!-- <app-edit-post></app-edit-post>
-    <hr> -->
-    <!-- <app-post></app-post> -->
   </div>
 </div>
 

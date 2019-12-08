@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
-import { Post } from '../post.model';
-import { PostsService } from '../posts.service';
+import { PostsService } from 'src/app/services/posts.service';
+import { Post } from 'src/app/models/post.model';
 
 @Component({
-  selector: 'aw-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  selector: 'aw-post-page',
+  templateUrl: './post-page.component.html',
+  styleUrls: ['./post-page.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostPageComponent implements OnInit {
   post: Post;
 
   constructor(private postService: PostsService, 
@@ -23,9 +23,5 @@ export class PostComponent implements OnInit {
         this.post = this.postService.getPost(postId);
       }
     )
-  }
-
-  onEdit() {
-    this.router.navigate(['/posts', this.post.id, 'edit'], {queryParamsHandling: 'preserve'});
   }
 }

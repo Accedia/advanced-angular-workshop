@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'aw-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'aw-users-page',
+  templateUrl: './users-page.component.html',
+  styleUrls: ['./users-page.component.css']
 })
-export class UsersComponent {
+export class UsersPageComponent {
   users = [
     {
       id: 1,
