@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 
@@ -8,7 +9,7 @@ import { Post } from '../../models/post.model';
   styleUrls: ['./posts-page.component.scss']
 })
 export class PostsPageComponent {
-  private posts: Post[];
+  public posts: Post[];
 
   constructor(postService: PostService) {
     this.posts = postService.getPosts();

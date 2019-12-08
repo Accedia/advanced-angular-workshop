@@ -10,5 +10,4 @@ export class SlicePipe implements PipeTransform {
       ? `${value.substring(0, maxLength)}...`
       : value;
   }
-
 }

@@ -1,22 +1,27 @@
-import { Component } from '@angular/core';
-import { Post } from '../../models/post.model';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PostService } from '../../services/post.service';
 
-//TODO - make form for adding post in the posts array and add task for making some check on ngOnChange
+import { Post } from '../../models/post.model';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'aw-post-page',
   templateUrl: './post-page.component.html',
   styleUrls: ['./post-page.component.scss']
 })
-export class PostPageComponent {
-  private post: Post | undefined;
+export class PostPageComponent implements OnInit {
+  public post: Post | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private postService: PostService
-  ) {
-    this.post = this.postService.getPostById(this.activatedRoute.snapshot.params.id);
+  ) { }
+
+  ngOnInit() {
+    this.activatedRoute.params.subscribe(
+      (params) => {
+        this.post = this.postService.getPostById(params['id']);
+      }
+    )
   }
 }
