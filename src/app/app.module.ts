@@ -4,22 +4,24 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { PostsComponent } from './posts/posts.component';
-import { EditPostComponent } from './posts/edit-post/edit-post.component';
-import { PostComponent } from './posts/post/post.component';
-import { UsersComponent } from './users/users.component';
-import { UserComponent } from './users/user/user.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { PostsPageComponent } from './pages/posts-page/posts-page.component';
+import { PostPageComponent } from './pages/post-page/post-page.component';
+import { PostComponent } from './components/post/post.component';
+import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      HomeComponent,
-      UsersComponent,
+      HomePageComponent,
+      UsersPageComponent,
+      UserPageComponent,
       UserComponent,
-      PostsComponent,
-      PostComponent,
-      EditPostComponent
+      PostsPageComponent,
+      PostPageComponent,
+      PostComponent
    ],
    imports: [
       BrowserModule,
