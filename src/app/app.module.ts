@@ -7,12 +7,12 @@ import { PostsModule } from './posts/posts.module';
 import { NotFoundModule } from './not-found/not-found.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomePageComponent } from './home/pages/home-page/home-page.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      HomeComponent
+      HomePageComponent
    ],
    imports: [
       BrowserModule,

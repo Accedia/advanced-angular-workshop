@@ -1,17 +1,15 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 
-import { PostsComponent } from './posts.component';
-import { PostComponent } from './post/post.component';
-import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostsPageComponent } from "./pages/posts-page/posts-page.component";
+import { PostPageComponent } from './pages/post-page/post-page.component';
 
 const routes: Routes = [
   {
     path: 'posts',
-    component: PostsComponent, 
+    component: PostsPageComponent, 
     children: [
-      {path: ':id', component: PostComponent},
-      {path: ':id/edit', component: EditPostComponent}
+      {path: ':id', component: PostPageComponent}
     ]
   }
 ];

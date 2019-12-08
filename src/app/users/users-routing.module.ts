@@ -1,15 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from "@angular/core";
 
-import { UsersComponent } from './users.component';
-import { UserComponent } from './user/user.component';
+import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
 
 const routes: Routes = [
   {
     path: 'users', 
-    component: UsersComponent, 
+    component: UsersPageComponent, 
     children: [
-      { path: ':id/:name', component: UserComponent },
+      { path: ':id/:name', component: UserPageComponent },
   ]},
 ]
 @NgModule({
