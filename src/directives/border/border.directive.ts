@@ -12,7 +12,7 @@ export class AwBorderDirective implements OnInit {
 
   constructor(/** TODO 2.1 - add Renderer2 and ElementRef*/) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const border = `${this.borderSize} ${this.borderStyle} ${this.borderColor}`;
     // TODO 2.1 - set display and border styles
   }
