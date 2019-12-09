@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Post } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
 
@@ -7,10 +8,12 @@ import { PostService } from '../../services/post.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public posts: Post[];
 
-  constructor(postService: PostService) {
-    this.posts = postService.getPosts();
+  constructor(private postService: PostService) { }
+
+  ngOnInit(): void {
+    this.posts = this.postService.getPosts();
   }
 }

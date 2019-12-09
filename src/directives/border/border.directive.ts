@@ -5,12 +5,13 @@ import { Input, Directive, Renderer2, ElementRef, OnInit } from '@angular/core';
 })
 export class AwBorderDirective implements OnInit {
   @Input('awBorder') color: string = "#3257a8";
+  
   display = 'block';
   border = '3px solid';
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.renderer.setStyle(
       this.elementRef.nativeElement,
       'display',
