@@ -7,7 +7,6 @@ import {
   PostComponent,
 } from './components';
 
-import { PostService } from './services/post.service';
 import { AwBorderDirective } from './directives/border/border.directive';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { AwBorderDirective } from './directives/border/border.directive';
   imports: [
     BrowserModule
   ],
-  providers: [PostService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
