@@ -9,7 +9,7 @@ import {
 } from './pages'
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
+  { path: '', component: HomePageComponent },
   { path: 'posts', component: PostsPageComponent,
     children: [
       { path: ':id', component: PostPageComponent }
