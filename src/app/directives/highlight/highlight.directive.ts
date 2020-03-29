@@ -5,7 +5,7 @@ import { Directive, ElementRef, OnInit, Renderer2, Input } from '@angular/core';
 })
 export class HighlightDirective implements OnInit {
   @Input('awHighlight') highlightColor: string;
-  
+
   constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
